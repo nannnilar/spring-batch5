@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{::main})"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+    <div th:if="${success}" class="alert alert-success" role="alert">
+        <p>Author is successfully saved.</p>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Authors</h3>
+                </div>
+<!--                <div class="card-body">-->
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>DateOfBirth</th>
+                            <th>PhoneNumber</th>
+                            <th>Address</th>
+                            <th>Action</th>
+                            <th>Update</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="auth:${authors}">
+                            <td th:text="${auth.id}"></td>
+                            <td th:text="${auth.name}"></td>
+                            <td th:text="${auth.dateOfBirth}"></td>
+                            <td th:text="${auth.phoneNumber}"></td>
+                            <td th:text="${auth.address}"></td>
+                            <td><a class="btn btn-outline-danger"
+                                   th:href="@{'/delete/author?id='+${auth.id}}">Delete</a></td>
+                            <td><a class="btn btn-outline-info"
+                                   th:href="@{'/update/author?id='+${auth.id}}">Update</a></td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+                    <a href="#" class="btn btn-primary" th:href="@{/author-form}">New Author</a>
+<!--                </div>-->
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

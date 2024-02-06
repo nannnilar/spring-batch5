@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans>
+        <bean id="person" class="org.example.bean.Person" autowire="constructor">
+            <property name="name" value="John William"/>
+<!--            <property name="address" ref="address"/>-->
+<!--            <constructor-arg name="address1" ref="address"/>-->
+        </bean>
+
+        <bean id="address" class="org.example.bean.Address">
+            <property name="city" value="Mandalay"/>
+        </bean>
+    </beans>
+</beans>

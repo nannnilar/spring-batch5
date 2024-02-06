@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html th:fragment="layout(main)" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css"
+  th:href="@{/bootstrap/css/bootstrap.min.css}">
+  <link rel="stylesheet" href="../../static/bootstrap/css/custom.css"
+  th:href="@{/bootstrap/css/custom.css}">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md">
+  <a href="#" class="navbar-brand ">
+    <h3 class="mb-0 text-white">Book Shop</h3>
+  </a>
+
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#myNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="myNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link">About</a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#" class="nav-link">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<section id="showcase" class="d-flex justify-content-center align-items-center">
+  <div id="overlay"></div>
+  <div id="header" class="container text-center text-white">
+    <h3 class="display-4 mb-0">MODERN BOOK SHOP</h3>
+    <p class=" lead d-none d-md-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, sequi.</p>
+    <button id="book" class="btn btn-lg btn-info px-5">DREAM AS U DREAM</button>
+  </div>
+</section>
+
+<section id="icon">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="../../static/images/book.png" alt="" class="img-fluid my-2 d-none d-md-inline" th:src="@{/images/book.png}"
+        style="width: 200px!important; height: 200px!important;">
+        <h3>Books You Like</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus eveniet libero nemo quae, quasi repellat saepe sunt tempora veritatis. Ab assumenda at eius fuga illo illum iure maiores possimus!</p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="../../static/images/rainy.png.png" alt="" class="img-fluid my-2 d-none d-md-inline" th:src="@{/images/rainy.png}"
+             style="width: 200px!important; height: 200px!important;">
+        <h3>Books You Like</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus eveniet libero nemo quae, quasi repellat saepe sunt tempora veritatis. Ab assumenda at eius fuga illo illum iure maiores possimus!</p>
+      </div>
+
+      <div class="col-md-4">
+        <img src="../../static/images/coffee.png.png" alt="" class="img-fluid my-2 d-none d-md-inline" th:src="@{/images/coffee.png}"
+             style="width: 200px!important; height: 200px!important;">
+        <h3>Books You Like</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus eveniet libero nemo quae, quasi repellat saepe sunt tempora veritatis. Ab assumenda at eius fuga illo illum iure maiores possimus!</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div th:replace="${main}"></div>
+
+<section id="explore" class="text-center mt-5 my-5">
+  <div class="container">
+    <h3>IMPROVE READING SKILL</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="../../static/images/bookone.jpg" class="card-img-top" alt="card image" th:src="@{/images/bookone.jpg}">
+          <div class="card-body">
+            <h3 class="card-title">Pride And Prejudice</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, natus!</p>
+            <a href="" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="../../static/images/bookone.jpg" class="card-img-top" alt="card image" th:src="@{/images/bookone.jpg}">
+          <div class="card-body">
+            <h3 class="card-title">Brave New World</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, natus!</p>
+            <a href="" class="btn btn-outline-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quote" class="text-center mt-5">
+  <div class="container">
+    <h3>WHAT OUR CUSTOMERS SAYING</h3>
+    <div class="row">
+      <div class="col-md-4 my-2">
+        <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+        <blockquote class="blockquote">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid ea eos, est eveniet, fugiat maxime molestiae mollitia placeat rem sed suscipit velit vitae. Doloremque excepturi harum iste itaque soluta.</p>
+        <footer class="blockquote-footer">Mark </footer>
+        </blockquote>
+      </div>
+
+      <div class="col-md-4 my-2">
+        <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+        <blockquote class="blockquote">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid ea eos, est eveniet, fugiat maxime molestiae mollitia placeat rem sed suscipit velit vitae. Doloremque excepturi harum iste itaque soluta.</p>
+          <footer class="blockquote-footer">Mark </footer>
+        </blockquote>
+      </div>
+
+      <div class="col-md-4 my-2">
+        <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
+        <blockquote class="blockquote">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aliquid ea eos, est eveniet, fugiat maxime molestiae mollitia placeat rem sed suscipit velit vitae. Doloremque excepturi harum iste itaque soluta.</p>
+          <footer class="blockquote-footer">Flora </footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="carousel slide" data-ride="carousel" id="mainCarousel">
+          <div class="carousel-inner">
+            <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="d-block w-100">
+
+            <div class="carousel-item">
+              <img src="https://unsplash.com/photos/wm4DuvIpLj8" alt="" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+              <img src="https://unsplash.com/photos/umZFe8ok4MQ" alt="" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+              <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+              <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="d-block w-100">
+            </div>
+
+            <div class="carousel-item">
+              <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="d-block w-100">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-target="#carouselExampleControls" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-target="#carouselExampleControls" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <h3>READING MAKE ME COOL</h3>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores aspernatur beatae exercitationem harum magnam mollitia nihil nobis, omnis sequi.</p>
+        <a href="#"><i class="fa fa-arrow-right mr-2"></i>Read More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="photo" class="text-center mt-5">
+  <div class="container">
+    <h3>WHAT OTHERS SAYING!!!</h3>
+    <div class="row">
+      <div class="col-md-3">
+        <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-3">
+        <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-3">
+        <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-3">
+        <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="img-fluid">
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-3">
+        <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-3">
+        <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-3">
+        <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="img-fluid">
+      </div>
+      <div class="col-md-3">
+        <img src="https://unsplash.com/photos/kh1Vb7JDR4w" alt="" class="img-fluid">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container text-center">
+    <span><i class="fas fa-quote-left fa-2x text-primary mb-3"></i></span>
+    <blockquote>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae culpa, deleniti dolor doloribus ducimus natus quae quibusdam repudiandae vel voluptatibus. Debitis dicta fuga illo magni, nostrum pariatur placeat repellat sint.</p>
+      <footer class="blockquote-footer">Flora Kite</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section id="footer" class="bg-dark">
+  <div class="container text-white text-center py-5">
+    <p class="lead">JOIN OUR BOOK STORE FOR DEALS AND DISCOUNT</p>
+    <div class="row justify-content-center">
+     <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+       <form action="" class="form-inline">
+         <div class="input-group">
+           <input type="text" placeholder="Email" class="form-control">
+           <div class="input-group-append">
+             <button class="btn btn-info">JOIN NOW</button>
+           </div>
+         </div>
+       </form>
+     </div>
+    </div>
+  </div>
+</section>
+
+<section id="" class="p-3 bg-secondary">
+  <ul class="nav text-center justify-content-center flex-sm-row">
+    <li class="nav-item ">
+      <a href="" class="nav-link text-white">FAQ</a>
+    </li>
+
+    <li class="nav-item ">
+      <a href="" class="nav-link text-white">EXPERIENCE</a>
+    </li>
+
+    <li class="nav-item ">
+      <a href="" class="nav-link text-white">EXPLORE</a>
+    </li>
+
+    <li class="nav-item ">
+      <a href="" class="nav-link text-white">CONTACT</a>
+    </li>
+  </ul>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html th:replace="layouts/master-layout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <h3>Category Form</h3>
+            </div>
+            <div class="card-body">
+            <form action="#" th:action="@{/save-category}" th:object="${category}" method="post">
+                <div class="form-group">
+                    <label>Category</label>
+                    <input type="text" class="form-control" th:classappend="${#fields.hasErrors('name')} ? 'is-invalid'"
+                           th:field="*{name}">
+                    <small class="invalid-feedback"
+                           th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></small>
+                </div>
+                <button class="btn btn-primary" type="submit">Save Category</button>
+                
+            </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</main>         
+</body>
+</html>

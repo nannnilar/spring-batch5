@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div th:fragment="requestForm">
+
+  <h1>Request Scoped Form</h1>
+  <h3>The current RequestValue is [<span th:text="${requestValue}"></span>]</h3>
+
+  <form th:action="@{/save-request-value}" action="#" method="post">
+  <div class="form-group">
+    <label>Request Value</label>
+    <input type="text" name="num" class="form-control">
+  </div>
+  <input type="submit" value="Save Request Value" class="btn btn-primary">
+</form>
+</div>
+
+
+</body>
+</html>

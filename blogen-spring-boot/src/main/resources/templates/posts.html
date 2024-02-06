@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Posts</h3>
+                            <table class="table table-striped">
+                                <thead class="thead-dark">
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Post Updated</th>
+                                    <th>Customer</th>
+                                    <th>Category</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="pos : ${posts}">
+                                    <td th:text="${}"></td>
+                                    <td th:text=""></td>
+                                    <td th:text=""></td>
+                                    <td th:text=""></td>
+                                    <td th:text=""></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>

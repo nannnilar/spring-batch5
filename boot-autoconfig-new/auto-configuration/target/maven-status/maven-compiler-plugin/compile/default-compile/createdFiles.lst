@@ -1,0 +1,6 @@
+org\example\file\local\LocalFileStoreAutoConfiguration.class
+org\example\file\network\NetworkFileStore.class
+org\example\file\network\NetworkFileStoreAutoConfiguration.class
+org\example\db\DataSourceConfig.class
+org\example\file\local\LocalFileSource.class
+org\example\file\FileStore.class

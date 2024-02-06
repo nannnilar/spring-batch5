@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{:: main})" lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="container my-5">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h3>All Info</h3>
+          </div>
+          <form action="">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="card-text">FirstName</p>
+              </div>
+              <div class="col-md-6">
+               <p class="card-text" th:text="${employee.firstName}"></p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="card-text">LastName</p>
+              </div>
+              <div class="col-md-6">
+                <p class="card-text" th:text="${employee.lastName}"></p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="card-text">Email</p>
+              </div>
+              <div class="col-md-6">
+                <p class="card-text" th:text="${employee.email}"></p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="card-text">StreetName</p>
+              </div>
+              <div class="col-md-6">
+                <p class="card-text" th:text="${address.streetName}"></p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="card-text">State</p>
+              </div>
+              <div class="col-md-6">
+                <p class="card-text" th:text="${address.streetName}"></p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="card-text">Zip Code</p>
+              </div>
+              <div class="col-md-6">
+                <p class="card-text" th:text="${address.zipCode}"></p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="card-text">Specification</p>
+              </div>
+              <div class="col-md-6">
+                <p class="card-text" th:text="${experties.specification}"></p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="card-text">Qualification</p>
+              </div>
+              <div class="col-md-6">
+                <p class="card-text" th:text="${experties.qualification}"></p>
+              </div>
+
+              <div class="col-md-6">
+                <p class="card-text">Experties Name</p>
+              </div>
+              <div class="col-md-6">
+                <p class="card-text" th:text="${experties.expertiesName}"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

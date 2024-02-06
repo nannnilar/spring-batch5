@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html th:replace="layout/masterLayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+          <h3 class="display-3">Spring Security Example</h3>
+          <p>This is a Home Page accessible to everyone.</p>
+          <p>Use this menu to navigate protected resources.</p>
+          <div th:replace="fragments/accountList.html :: account-List"></div>
+      </div>
+  </div>
+</main>
+</body>
+</html>

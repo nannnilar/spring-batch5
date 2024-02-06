@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html th:fragment="layout(main)" lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.min.css"
+  th:href="@{/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+<nav th:fragment="navbar" class="navbar navbar-expand-md navbar-dark bg-primary">
+    <a  class="navbar-brand">MVC</a>
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="myNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="#myNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link">Employees</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Customers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Departments</a>
+            </li>
+        </ul>
+
+        <div sec:authorize="!isAuthenticated()">
+            <a th:href="@{/signup}" class="mr-3"
+            style="text-decoration: none!important; color: white!important; font-size: 24px;!important;">Register</a>
+            <a th:href="@{/login}"
+               style="text-decoration: none!important; color: white!important; font-size: 24px;!important;">Login</a>
+        </div>
+
+        <div sec:authorize="isAuthenticated()">
+            <a href="javascript: document.logoutForm.submit()"
+               style="text-decoration: none!important; color: white!important; font-size: 24px;!important;">Logout</a>
+            <form th:action="@{/logout}" method="post" name="logoutForm" th:hidden="true">
+                <input type="submit" hiddien value="Submit">
+
+            </form>
+        </div>
+    </div>
+</nav>
+<div th:replace="${main}"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

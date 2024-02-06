@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html th:replace="layouts/master-layout :: layout(~{:: main})" lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="row">
+    <div class="col-md-4" th:each="pro : ${products}">
+      <div class="card mb-3">
+        <img th:src="${pro.imageUrl}" class="card-img-top" alt="">
+        <div class="card-body">
+          <p class="card-title" th:text="${pro.name}"></p>
+          <p class="card-text" th:text="${pro.category.name}"></p>
+          <div class="d-flex justify-content-between">
+            <p class="lead" th:text="${pro.price}"></p>
+            <p class="lead" th:text="${pro.lastUpdated}"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

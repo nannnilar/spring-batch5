@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div th:fragment="sessionForm">
+
+  <h1>Session Scoped Form</h1>
+  <h3>The current SessionValue is [<span th:text="${sessionValue}"></span>]</h3>
+
+  <form th:action="@{/save-session-value}" action="#" method="post">
+  <div class="form-group">
+    <label>Session Value</label>
+    <input type="text" name="num" class="form-control">
+  </div>
+  <input type="submit" value="Save Session Value" class="btn btn-primary">
+</form>
+</div>
+
+
+</body>
+</html>

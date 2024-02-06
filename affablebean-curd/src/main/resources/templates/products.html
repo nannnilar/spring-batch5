@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html th:replace="layouts/master-layout :: layout(~{:: main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3>Product Table</h3>
+        </div>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Action</th>
+            <th>Update</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="pro : ${products}">
+            <td th:text="${pro.id}"></td>
+            <td th:text="${pro.name}"></td>
+            <td th:text="${pro.price}"></td>
+            <td th:text="${pro.description}"></td>
+            <td th:text="${pro.category.name}"></td>
+            <td><a class="btn btn-outline-danger" th:href="@{'/remove/' +${pro.id}}">Delete</a></td>
+            <td ><a class="btn-outline-info" th:href="@{'/update/product' +${pro.id}}">Update</a></td>
+            <td><a class="btn-outline-primary" th:href="@{'/product/detail?id='+${pro.id}}">Details</a></td>
+          </tr>
+          </tbody>
+        </table>
+        <a th:href="@{/product-form}" class="btn btn-primary">New Product</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,5 @@
+app:
+  application:
+    name: MyAmazingApp
+    id: 223
+    address: http://myapp.com

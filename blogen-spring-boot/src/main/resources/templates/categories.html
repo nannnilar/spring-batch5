@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{:: main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <section id="category-header" class="bg-success text-white p-3">
+    <div class="container">
+      <h1><i class="fa-solid fa-folder mr-1"></i>Categories</h1>
+    </div>
+  </section>
+
+  <section id="categoryForm" class="bg-light p-5">
+    <div class="row">
+      <div class="offset-md-6 col-md-6">
+        <form action="#">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Categories">
+            <div class="input-group-append">
+              <button class="btn btn-success">Search</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="my-4">
+    <div class="container">
+      <div class="row">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h3>Latest Categories</h3>
+          </div>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Date Posted</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="cat :${categories}">
+              <td th:text="${cat.id}"></td>
+              <td th:text="${cat.title}"></td>
+              <td th:text="${cat.dataPosted}"></td>
+
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: address-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservice
+    username: root
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8083/eureka

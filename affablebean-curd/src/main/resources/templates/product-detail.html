@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html th:replace="layouts/master-layout :: layout(~{:: main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="row">
+    <div class="col-md-4">
+      <img th:src="${product.imageUrl}" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <h3 th:text="${product.name}"></h3>
+      <p class="lead" th:text="${product.category.name}"></p>
+      <p class="lead" th:text="${product.price+ '$'}"></p>
+      <p class="lead" th:text="${product.description}"></p>
+      <p class="lead" th:text="${product.lastUpdated}"></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi corporis dolorem dolores ea enim facere fuga fugiat id ipsum iste magnam minus necessitatibus nihil odit omnis porro sequi sit, tenetur!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi corporis dolorem dolores ea enim facere fuga fugiat id ipsum iste magnam minus necessitatibus nihil odit omnis porro sequi sit, tenetur!</p>
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

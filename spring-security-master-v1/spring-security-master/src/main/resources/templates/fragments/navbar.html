@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+  xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<body>
+<nav th:fragment="navbar" class="navbar navbar-expand-md navbar-dark bg-primary">
+  <a href="#" class="navbar-brand">MVC</a>
+  <button type="button" class="navbar-toggler" data-toggle="collapse"
+   data-target="myNav">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="#myNav" class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a th:href="@{/employee/list-employees}" class="nav-link">Employees</a>
+      </li>
+      <li class="nav-item">
+        <a th:href="@{/customer/list-customers}" class="nav-link">Customers</a>
+      </li>
+      <li class="nav-item">
+        <a th:href="@{/department/departments}" class="nav-link">Departments</a>
+      </li>
+    </ul>
+    <div sec:authorize="!isAuthenticated()">
+      <a href="#" class="nav-link" th:href="@{/login}" style="text-decoration: none!important;color: white!important;font-size: 20px!important;">Login</a>
+    </div>
+    <div sec:authorize="isAuthenticated()">
+      <a href="#" th:href="@{/account/info}" class="mr-2" style="text-decoration: none!important;color: white!important;font-size: 20px!important;">Account Info</a>
+
+      <a href="javascript:document.logoutForm.submit()" style="text-decoration: none!important;color: white!important;font-size: 20px!important;"> Logout</a>
+
+      <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
+        <input type="submit" hidden value="Sign Out">
+      </form>
+    </div>
+
+
+
+
+
+
+
+
+  </div>
+</nav>
+</body>
+</html>

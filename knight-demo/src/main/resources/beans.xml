@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans>
+        <bean id="knight" class="org.example.Knight" autowire="default">
+            <qualifier value="dragon"/>
+<!--            <property name="quest" ref="yoyeyo"/>-->
+        </bean>
+        <bean id="dragon" class="org.example.KillDragonQuest"/>
+
+        <bean id="belle" class="org.example.RescuringBelleQuest"/>
+
+        <bean id="matri" class="org.example.GreatMatrimonyQuest"/>
+
+        <bean id="yoyeyo" class="org.example.SingYoYeYoQuest"/>
+    </beans>
+
+</beans>

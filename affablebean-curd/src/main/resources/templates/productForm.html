@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html th:replace="layouts/master-layout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3>Product Form</h3>
+        </div>
+        <div class="card-body">
+          <form action="#" th:action="@{/save-product}" th:object="${product}" method="post">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" th:field="*{name}" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Price</label>
+              <input type="number" step="any" th:field="*{price}" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Description</label>
+              <input type="text" th:field="*{description}" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>ImageUrl</label>
+              <input type="text" th:field="*{imageUrl}" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>LastUpdated</label>
+              <input type="date" th:field="*{lastUpdated}" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label>Category</label>
+              <select class="form-control" th:field="*{category.id}">
+                <option th:each="cat : ${categories}" th:value="${cat.id}"
+                  th:text="${cat.name}"></option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Product</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

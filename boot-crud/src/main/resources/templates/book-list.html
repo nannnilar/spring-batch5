@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{::main})"  xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<body>
+<main role="main">
+  <h1>Book List</h1>
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header">
+          <h3>Books List</h3>
+        </div>
+        <table class="table-striped">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Publisher</th>
+            <th>Author Name</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr th:each="book : ${books}">
+            <td th:text="${book.id}"></td>
+            <td th:text="${book.title}"></td>
+            <td th:text="${book.price + '$'}"></td>
+            <td th:text="${book.publisher}"></td>
+            <td th:text="${book.author.name}"></td>
+            <td></td>
+          </tr>
+          </tbody>
+        </table>
+        <a th:href="@{/book-form}" class="btn btn-primary btn-block">New Book</a>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+
+</body>
+</html>

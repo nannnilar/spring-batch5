@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{::main})" lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="container">
+      <div class="row">
+          <div class="col">
+              <div class="card">
+                  <div class="card-header">
+                      <h3>Customer Table</h3>
+                  </div>
+                  <table class="table table-striped">
+                      <thead>
+                      <tr>
+                          <th>Id</th>
+                          <th>Name</th>
+                          <th>Phone Number</th>
+                          <th>Email</th>
+                          <th>Roles</th>
+                      </tr>
+                      </thead>
+
+                      <tbody>
+                      <tr th:each="cu : ${customers}">
+                          <td th:text="${cu.id}"></td>
+                          <td th:text="${cu.userName}"></td>
+                          <td th:text="${cu.phoneNumber}"></td>
+                          <td th:text="${cu.email}"></td>
+                          <td th:text="${cu.getRoles()}"></td>
+                      </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
+
+</body>
+</html>

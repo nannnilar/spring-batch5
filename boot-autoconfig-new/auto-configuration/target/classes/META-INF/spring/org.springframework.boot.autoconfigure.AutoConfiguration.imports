@@ -1,0 +1,3 @@
+org.example.db.DataSourceConfig
+org.example.file.local.LocalFileStoreAutoConfiguration
+org.example.file.network.NetworkFileStoreAutoConfiguration

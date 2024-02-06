@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div th:fragment="account-List">
+    <p class="p-3">Accounts below are example to explore Spring Security System.</p>
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">John</h5>
+                    <h6 CLASS="card-subtitle text-muted">SUPER_ADMIN</h6>
+                    <p>Username: john</p>
+                    <p>Password: john</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Emma</h5>
+                    <h6 CLASS="card-subtitle text-muted">EMPLOYEE_ADMIN</h6>
+                    <p>Username: emma</p>
+                    <p>Password: emma</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">William</h5>
+                    <h6 CLASS="card-subtitle text-muted">
+                        DEPARTMENT_PAGE_VIEW,DEPARTMENT_READ,DEPARTMENT_CREATE
+                    </h6>
+                    <p>Username: william</p>
+                    <p>Password: william</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Lucas</h5>
+                    <h6 CLASS="card-subtitle text-muted">
+                        CUSTOMER_PAGE_VIEW_,CUSTOMER_READ
+                    </h6>
+                    <p>Username: lucas</p>
+                    <p>Password: lucas</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Tom</h5>
+                    <h6 CLASS="card-subtitle text-muted">No Roles</h6>
+                    <p>Username: tom</p>
+                    <p>Password: tom</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html th:replace="layouts/masterLayout :: layout(~{::main})" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<main role="main">
+  <div class="container md-5">
+   <div class="row mb-3">
+     <div class="col">
+       <div class="card">
+         <div class="card-header">
+           <h3>Servlet Context</h3>
+         </div>
+         <div class="card-body">
+           <h3>Servlet Context Info <span th:text="${webContext}"></span></h3>
+         </div>
+       </div>
+     </div>
+   </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h3>Request Scoped</h3>
+          </div>
+          <div class="card-body">
+            <div th:replace="fragments/requestForm.html :: requestForm"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h3>Session Scoped</h3>
+          </div>
+          <div class="card-body">
+            <div th:replace="fragments/sessionForm.html :: sessionForm"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <div class="card">
+          <div class="card-header">
+            <h3>Application Scoped</h3>
+          </div>
+          <div class="card-body">
+            <div th:replace="fragments/applicationForm.html :: applicationForm"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
